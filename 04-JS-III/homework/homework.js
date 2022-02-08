@@ -1,7 +1,7 @@
 // No cambies los nombres de las funciones.
 
 function devolverPrimerElemento(array) {
-  return devolverPrimerElemento[0];
+  return array[0];
 }
 
 // Devuelve el primer elemento de un  array (pasado por parametro)
@@ -27,7 +27,7 @@ function incrementarPorUno(array) {
     nuevoarray[i] - array[i] + 1;
   }
   {
-    return nuevoarray;
+    return array;
   }
 }
 
@@ -37,33 +37,33 @@ function incrementarPorUno(array) {
 // Tu código:
 
 function agregarItemAlFinalDelArray(array, elemento) {
-  var array = [];
-  {
-    array.push(2);
-  }
-  {
-    return agregarItemAlComienzoDelArray;
-  }
-
-  // Añade el "elemento" al final del array
-  // y devuelve el array
-  // Tu código:
+  array.push(elemento);
+  return array;
 }
+
+// Añade el "elemento" al final del array
+// y devuelve el array
+// Tu código:
 
 function agregarItemAlComienzoDelArray(array, elemento) {
-  // Añade el "elemento" al comienzo del array
-  // y devuelve el array
-  // Pista: usa el método `.unshift`
-  // Tu código:
+  array.unshift(elemento);
+
+  return array;
 }
+// Añade el "elemento" al comienzo del array
+// y devuelve el array
+// Pista: usa el método `.unshift`
+// Tu código:
 
 function dePalabrasAFrase(palabras) {
-  // "palabras" es un array de strings/cadenas
-  // Devuelve un string donde todas las palabras estén concatenadas
-  // con espacios entre cada palabra
-  // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
-  // Tu código:
+  var palabras = ["Fede", "CABEZA"];
+  return palabras;
 }
+// "palabras" es un array de strings/cadenas
+// Devuelve un string donde todas las palabras estén concatenadas
+// con espacios entre cada palabra
+// Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
+// Tu código:
 
 function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
