@@ -159,23 +159,20 @@ function fizzBuzz(num) {
 // Si "numero" es divisible entre 5, devuelve "buzz"
 // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
 // De lo contrario, devuelve el numero
-
 function operadoresLogicos(num1, num2, num3) {
-  let EsmayoryPosit = "Número 1 es mayor y positivo";
-  let HayNegativos = "Hay Negativos";
-  let esCero = "Error";
-
   if (num1 < 0 && num2 < 0 && num3 < 0) {
-    return HayNegativos;
+    return "Hay Negativos";
   }
   {
     if (num1 === 0 || num2 === 0 || num3 === 0) {
-      return esCero;
+      return "Error";
     }
+
     {
       if (num1 > num2 && num1 > num3 && num1 > 0) {
-        return EsmayoryPosit;
+        return "Número 1 es mayor y positivo";
       }
+
       {
         if (num3 > num1 && num3 > num2) {
           return num3 + 1;
@@ -197,6 +194,9 @@ function esPrimo(numero) {
   if (numero === 1 || numero === 0) {
     return false;
   }
+  if (numero === 2) {
+    return true;
+  }
   for (j = 2; j <= numero; j++) {
     if (numero % j === 0) {
       return false;
@@ -212,24 +212,27 @@ function esPrimo(numero) {
 // Nota: Los números 0 y 1 NO son considerados números primos
 
 function esVerdadero(valor) {
-  if (valor < 4) {
+  if (valor < 5) {
     return "Soy falso";
   }
   {
-    if (valor > 4) {
+    if (valor > 5) {
       return "Soy verdadero";
     }
   }
 }
-esVerdadero(5);
+esVerdadero(6);
 
 //Escribe una función que reciba un valor booleano y retorne “Soy verdadero”
 //si su valor es true y “Soy falso” si su valor es false.
 //Escribe tu código aquí
 
 function tablaDelSeis(x) {
-  var tabla = [];
-  for (var i = 1; i < 11; i++) document.write(x + "x" + i + "=" + x * i);
+  var array = [];
+  for (var i = 1; i < 11; i++) {
+    array.push(6 * i);
+  }
+  return array;
 }
 
 //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
