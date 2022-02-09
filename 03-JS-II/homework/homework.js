@@ -159,30 +159,24 @@ function fizzBuzz(num) {
 // Si "numero" es divisible entre 5, devuelve "buzz"
 // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
 // De lo contrario, devuelve el numero
+
 function operadoresLogicos(num1, num2, num3) {
-  if (num1 < 0 && num2 < 0 && num3 < 0) {
-    return "Hay Negativos";
+  if (num1 === 0 || num2 === 0 || num3 === 0) {
+    return "Error";
   }
-  {
-    if (num1 === 0 || num2 === 0 || num3 === 0) {
-      return "Error";
-    }
-
-    {
-      if (num1 > num2 && num1 > num3 && num1 > 0) {
-        return "Número 1 es mayor y positivo";
-      }
-
-      {
-        if (num3 > num1 && num3 > num2) {
-          return num3 + 1;
-        } else {
-          return false;
-        }
-      }
-    }
+  if (num1 < 0 || num2 < 0 || num3 < 0) {
+    return "Hay negativos";
+  }
+  if (num1 > num2 && num1 > num3 && num1 > 0) {
+    return "Número 1 es mayor y positivo";
+  }
+  if (num3 > num1 && num3 > num2) {
+    return num3 + 1;
+  } else {
+    return false;
   }
 }
+
 //La función recibe tres números distintos.
 //Si num1 es mayor a num2 y a num3 y además es positivo, retornar ---> "Número 1 es mayor y positivo"
 //Si alguno de los tres números es negativo, retornar ---> "Hay negativos"
@@ -191,20 +185,22 @@ function operadoresLogicos(num1, num2, num3) {
 //Si no se cumplen ninguna de las condiciones anteriores, retornar false.
 
 function esPrimo(numero) {
-  if (numero === 1 || numero === 0) {
+  if (numero === 0 || numero === 1) {
     return false;
   }
   if (numero === 2) {
     return true;
   }
-  for (j = 2; j <= numero; j++) {
-    if (numero % j === 0) {
+  for (i = 2; i < numero; i++) {
+    if (numero % i === 0) {
       return false;
-    } else {
-      return true;
     }
   }
+  {
+    return true;
+  }
 }
+
 // Devuelve "true" si "numero" es primo
 // De lo contrario devuelve "falso"
 // Pista: un número primo solo es divisible por sí mismo y por 1
@@ -212,16 +208,12 @@ function esPrimo(numero) {
 // Nota: Los números 0 y 1 NO son considerados números primos
 
 function esVerdadero(valor) {
-  if (valor < 5) {
+  if (valor === true) {
+    return "Soy verdadero";
+  } else if (valor !== true) {
     return "Soy falso";
   }
-  {
-    if (valor > 5) {
-      return "Soy verdadero";
-    }
-  }
 }
-esVerdadero(6);
 
 //Escribe una función que reciba un valor booleano y retorne “Soy verdadero”
 //si su valor es true y “Soy falso” si su valor es false.
@@ -229,7 +221,7 @@ esVerdadero(6);
 
 function tablaDelSeis(x) {
   var array = [];
-  for (var i = 1; i < 11; i++) {
+  for (var i = 0; i < 11; i++) {
     array.push(6 * i);
   }
   return array;
