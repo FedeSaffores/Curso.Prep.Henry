@@ -66,24 +66,56 @@ function dePalabrasAFrase(palabras) {
 // Tu código:
 
 function arrayContiene(array, elemento) {
-  // Comprueba si el elemento existe dentro de "array"
-  // Devuelve "true" si está, o "false" si no está
-  // Tu código:
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] === elemento) {
+      return true;
+    }
+    {
+      if (array[i] === elemento) {
+        return false;
+      }
+    }
+  }
 }
+
+// Comprueba si el elemento existe dentro de "array"
+// Devuelve "true" si está, o "false" si no está
+// Tu código:
 
 function agregarNumeros(numeros) {
-  // "numeros" debe ser un arreglo de enteros (int/integers)
-  // Suma todos los enteros y devuelve el valor
-  // Tu código:
+  let suma = 0;
+  for (let i = 0; i < array.length; i++) {
+    suma = suma + numeros[i];
+  }
+  {
+    return suma;
+  }
 }
+
+// "numeros" debe ser un arreglo de enteros (int/integers)
+// Suma todos los enteros y devuelve el valor
+// Tu código:
 
 function promedioResultadosTest(resultadosTest) {
-  // "resultadosTest" debe ser una matriz de enteros (int/integers)
-  // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
-  // Tu código:
+  let suma = 0;
+  for (let i = 0; i < resultadosTest.length; i++) {
+    suma = suma + resultadosTest[i];
+  }
+  let prom = suma / resultadosTest.length;
+  {
+    return prom;
+  }
 }
 
+// "resultadosTest" debe ser una matriz de enteros (int/integers)
+// Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
+// Tu código:
+
 function numeroMasGrande(numeros) {
+  var numero = [];
+  {
+    return Math.Max(numero);
+  }
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
