@@ -25,9 +25,9 @@ function incrementarPorUno(array) {
   var nuevoarray = [];
   for (i = 0; i < array.length; i++) {
     nuevoarray[i] - array[i] + 1;
-  }
-  {
-    return array;
+    {
+      return array;
+    }
   }
 }
 
@@ -38,7 +38,9 @@ function incrementarPorUno(array) {
 
 function agregarItemAlFinalDelArray(array, elemento) {
   array.push(elemento);
-  return array;
+  {
+    return array;
+  }
 }
 
 // Añade el "elemento" al final del array
@@ -47,8 +49,9 @@ function agregarItemAlFinalDelArray(array, elemento) {
 
 function agregarItemAlComienzoDelArray(array, elemento) {
   array.unshift(elemento);
-
-  return array;
+  {
+    return array;
+  }
 }
 // Añade el "elemento" al comienzo del array
 // y devuelve el array
@@ -67,15 +70,9 @@ function dePalabrasAFrase(palabras) {
 
 function arrayContiene(array, elemento) {
   for (var i = 0; i < array.length; i++) {
-    if (array[i] === elemento) {
-      return true;
-    }
-    {
-      if (array[i] === elemento) {
-        return false;
-      }
-    }
+    if (array[i] === elemento) return true;
   }
+  return false;
 }
 
 // Comprueba si el elemento existe dentro de "array"
@@ -84,13 +81,12 @@ function arrayContiene(array, elemento) {
 
 function agregarNumeros(numeros) {
   let suma = 0;
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < numeros.length; i++) 
     suma = suma + numeros[i];
+
+    return suma; 
   }
-  {
-    return suma;
-  }
-}
+
 
 // "numeros" debe ser un arreglo de enteros (int/integers)
 // Suma todos los enteros y devuelve el valor
@@ -98,13 +94,11 @@ function agregarNumeros(numeros) {
 
 function promedioResultadosTest(resultadosTest) {
   let suma = 0;
-  for (let i = 0; i < resultadosTest.length; i++) {
+  for (let i = 0; i < resultadosTest.length; i++) 
     suma = suma + resultadosTest[i];
-  }
-  let prom = suma / resultadosTest.length;
-  {
-    return prom;
-  }
+    
+    {      
+  return suma / resultadosTest.length;
 }
 
 // "resultadosTest" debe ser una matriz de enteros (int/integers)
@@ -114,30 +108,63 @@ function promedioResultadosTest(resultadosTest) {
 function numeroMasGrande(numeros) {
   var numero = [];
   {
-    return Math.Max(numero);
+    return Math.max(numero);
   }
-  // "numeros" debe ser una matriz de enteros (int/integers)
-  // Devuelve el número más grande
-  // Tu código:
 }
+// "numeros" debe ser una matriz de enteros (int/integers)
+// Devuelve el número más grande
+// Tu código:
 
 function multiplicarArgumentos() {
-  // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
-  // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
-  // Escribe tu código aquí:
+  var multiplicar = 1;
+
+  for (var i = 0; i < argumentos.length; i++) {
+    multiplicar = multiplicar * argumentos[i];
+  }
+  {
+    return multiplicar;
+  }
 }
+
+// Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
+// Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
+// Escribe tu código aquí:
 
 function cuentoElementos(arreglo) {
-  //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
-  //Escribe tu código aquí
+  var filtro = [];
+  filtro = arreglo.filter(arreglo > 18);
+  return filtro;
 }
 
+//Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
+//Escribe tu código aquí
+
 function diaDeLaSemana(numeroDeDia) {
-  //Suponga que los días de la semana se codifican como 1 = Domingo, 2 = Lunes y así sucesivamente.
-  //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
-  //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario.
-  //Escribe tu código aquí
+  var diaDeLaSemana = [
+    "Domingo",
+    "Lunes",
+    "Martes",
+    "Miercoles",
+    "Jueves",
+    "Viernes",
+    "Sabado",
+  ];
+
+  {
+    if (diaDeLaSemana[(0, 6)]) {
+      return "Es fin de semana";
+    }
+    {
+      if (diaDeLaSemana[(1, 2, 3, 4, 5)]) {
+        return "Es dia Laboral";
+      }
+    }
+  }
 }
+//Suponga que los días de la semana se codifican como 1 = Domingo, 2 = Lunes y así sucesivamente.
+//Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
+//si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario.
+//Escribe tu código aquí
 
 function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero
