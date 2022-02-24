@@ -24,11 +24,10 @@ function obtenerLargoDelArray(array) {
 function incrementarPorUno(array) {
   var nuevoarray = [];
   for (i = 0; i < array.length; i++) {
-    nuevoarray[i] - array[i] + 1;
-    {
-      return array;
-    }
+    nuevoarray[i] = array[i] + 1;
   }
+
+  return nuevoarray;
 }
 
 // "array" debe ser una matriz de enteros (int/integers)
@@ -55,9 +54,11 @@ function agregarItemAlComienzoDelArray(array, elemento) {
 // Tu código:
 
 function dePalabrasAFrase(palabras) {
-  var palabras = ["Fede", "CABEZA"];
-  return palabras;
+  var cadena = ["Fede"];
+
+  return cadena + " Saffores";
 }
+
 // "palabras" es un array de strings/cadenas
 // Devuelve un string donde todas las palabras estén concatenadas
 // con espacios entre cada palabra
@@ -106,9 +107,9 @@ function promedioResultadosTest(resultadosTest) {
 // Tu código:
 
 function numeroMasGrande(numeros) {
-  var numero = [];
+  var numeros = [];
   {
-    return Math.max(numero);
+    return Math.max(numeros);
   }
 }
 // "numeros" debe ser una matriz de enteros (int/integers)
@@ -143,24 +144,8 @@ function cuentoElementos(arreglo) {
 //Escribe tu código aquí
 
 function diaDeLaSemana(numeroDeDia) {
-  var numeroDeDia = [
-    "Domingo",
-    "Lunes",
-    "MARTES",
-    "MIERCOLES",
-    "JUEVES",
-    "VIERNES",
-    "SABADO",
-  ];
-
-  {
-    if (numeroDeDia[(0, 6)]) {
-      return "Es fin de semana";
-    }
-    {
-      if (numeroDeDia[(1, 2, 3, 4, 5)]) return "Es dia Laboral";
-    }
-  }
+  if (numeroDeDia === 1 || numeroDeDia === 7) return "Es fin de semana";
+  else return "Es dia Laboral";
 }
 
 //Suponga que los días de la semana se codifican como 1 = Domingo, 2 = Lunes y así sucesivamente.
@@ -169,7 +154,7 @@ function diaDeLaSemana(numeroDeDia) {
 //Escribe tu código aquí
 
 function empiezaConNueve(n) {
-  var n = [100];
+  var n = [];
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
@@ -191,17 +176,40 @@ function todosIguales(arreglo) {
 //Escribe tu código aquí
 
 function mesesDelAño(array) {
-  //Dado un array que contiene algunos meses del año desordenados, recorrer el array buscando los meses de
-  // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
-  //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
-  // Tu código:
+  var meses = [];
+  for (var i = 0; i < array.lenght; i++) {
+    if (
+      array[i] === "Enero" ||
+      array[i] === "Marzo" ||
+      array[i] === "Noviembre"
+    );
+    meses.push(array[i]);
+    return meses;
+  }
+  if (
+    array[i] !== "Enero" ||
+    array[i] !== "Marzo" ||
+    array[i] !== "Noviembre"
+  ) {
+    return "No se encontraron los meses perdidos";
+  }
 }
 
+//Dado un array que contiene algunos meses del año desordenados, recorrer el array buscando los meses de
+// "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
+//Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
+// Tu código:
+
 function mayorACien(array) {
-  //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
-  //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
-  // Tu código:
+  var nuevoarray = [0];
+  for (var i = 0; i <= 200; i++) {
+    nuevoarray.push(array[i] > 100);
+  }
+  return nuevoarray;
 }
+//La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
+//valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
+// Tu código:
 
 function breakStatement(numero) {
   //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
