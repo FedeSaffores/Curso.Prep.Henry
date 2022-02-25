@@ -54,9 +54,7 @@ function agregarItemAlComienzoDelArray(array, elemento) {
 // Tu código:
 
 function dePalabrasAFrase(palabras) {
-  var cadena = ["Fede"];
-
-  return cadena + " Saffores";
+  return palabras.join(" ");
 }
 
 // "palabras" es un array de strings/cadenas
@@ -117,16 +115,17 @@ function numeroMasGrande(numeros) {
 // Tu código:
 
 function multiplicarArgumentos() {
-  var multiplicar = 1;
+  var resultado = [];
 
-  for (var i = 0; i < arguments.length; i++) {
-    multiplicar = multiplicar * arguments[i];
+  for (var i = 0; i < arguments.lenght; i++) {
+    resultado = arguments.lenght * arguments[i];
   }
-  if (arguments.lenght === 0) {
-    return 0;
-  }
-  if (argument.lenght !== 0) {
-    return multiplicar;
+  {
+    if (arguments.lenght === 0) {
+      return 0;
+    } else {
+      return resultado;
+    }
   }
 }
 
@@ -154,44 +153,45 @@ function diaDeLaSemana(numeroDeDia) {
 //Escribe tu código aquí
 
 function empiezaConNueve(n) {
-  var n = [];
-  //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero
-  //inicia con 9 y false en otro caso.
-  //Escribe tu código aquí
+  var parametro = [n];
+  if (parametro.toString().startsWith("9")) return true;
+  else {
+    return false;
+  }
 }
 
-function todosIguales(arreglo) {
-  var arreglo = [];
+//Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero
+//inicia con 9 y false en otro caso.
+//Escribe tu código aquí
 
-  for (var i = 0; i < arreglo.length; i++) {
-    if (arreglo.lenght[i] === arreglo.lenght[i]) {
-      return true;
-    } else {
+function todosIguales(arreglo) {
+  var elementos = [];
+  for (i = 0; i < arreglo.length; i++) {
+    if (arreglo.lenght === arreglo[i]) return true;
+    else {
       return false;
     }
   }
 }
+
 //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
 //retornar true, caso contrario retornar false.
 //Escribe tu código aquí
 
 function mesesDelAño(array) {
-  var meses = [];
-  for (var i = 0; i < array.lenght; i++) {
+  var nuevoArray = [];
+  for (i = 0; i < array.lenght; i++) {
     if (
       array[i] === "Enero" ||
       array[i] === "Marzo" ||
       array[i] === "Noviembre"
-    );
-    meses.push(array[i]);
-    return meses;
-  }
-  if (
-    array[i] !== "Enero" ||
-    array[i] !== "Marzo" ||
-    array[i] !== "Noviembre"
-  ) {
-    return "No se encontraron los meses perdidos";
+    ) {
+      nuevoArray.push(array[i]);
+
+      return nuevoArray;
+    } else {
+      ("No se encontraron los meses perdidos");
+    }
   }
 }
 
@@ -200,35 +200,41 @@ function mesesDelAño(array) {
 //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
 // Tu código:
 
-function mayorACien(array) {
-  var nuevoarray = [0];
-  for (var i = 0; i <= 200; i++) {
-    nuevoarray.push(array[i] > 100);
-  }
-  return nuevoarray;
-}
+function mayorACien(array) {}
+
 //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
 //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
 // Tu código:
 
 function breakStatement(numero) {
-  //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
-  //Guardar cada nuevo valor en un array.
-  //Devolver el array
-  //Si en algún momento el valor de la suma y la cantidad de iteraciones coinciden, debe interrumpirse la ejecución y
-  //devolver: "Se interrumpió la ejecución"
-  //Pista: usá el statement 'break'
-  // Tu código:
+  let n = 0;
+  let x = 0;
+  while (n < 20) {
+    n++;
+    x += n;
+  }
+  {
+    if (numero === 20) brack;
+    return "Se interrumpió la ejecución";
+  }
 }
 
-function continueStatement(numero) {
-  //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
-  //Guardar cada nuevo valor en un array.
-  //Devolver el array
-  //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
-  //Pista: usá el statement 'continue'
-  // Tu código:
-}
+//Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
+//Guardar cada nuevo valor en un array.
+//Devolver el array
+//Si en algún momento el valor de la suma y la cantidad de iteraciones coinciden, debe interrumpirse la ejecución y
+//devolver: "Se interrumpió la ejecución"
+//Pista: usá el statement 'break'
+// Tu código:
+
+function continueStatement(numero) {}
+
+//Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
+//Guardar cada nuevo valor en un array.
+//Devolver el array
+//Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
+//Pista: usá el statement 'continue'
+// Tu código:
 
 // No modificar nada debajo de esta línea
 // --------------------------------
