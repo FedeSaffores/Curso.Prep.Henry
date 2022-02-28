@@ -105,28 +105,21 @@ function promedioResultadosTest(resultadosTest) {
 // Tu código:
 
 function numeroMasGrande(numeros) {
-  var numeros = [];
-  {
-    return Math.max(numeros);
-  }
+  return Math.max.apply(null, numeros);
 }
+
 // "numeros" debe ser una matriz de enteros (int/integers)
 // Devuelve el número más grande
 // Tu código:
 
 function multiplicarArgumentos() {
-  var resultado = [];
-
-  for (var i = 0; i < arguments.lenght; i++) {
-    resultado = arguments.lenght * arguments[i];
+  if (arguments.length === 0) return 0;
+  if (arguments.lenght === 1) return arguments;
+  var total = 1;
+  for (i = 0; i < arguments.lenght; i++) {
+    total = total * arguments[i];
   }
-  {
-    if (arguments.lenght === 0) {
-      return 0;
-    } else {
-      return resultado;
-    }
-  }
+  return total;
 }
 
 // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
@@ -165,7 +158,7 @@ function empiezaConNueve(n) {
 //Escribe tu código aquí
 
 function todosIguales(arreglo) {
-  var elementos = [];
+  var elemento = [];
   for (i = 0; i < arreglo.length; i++) {
     if (arreglo.lenght === arreglo[i]) return true;
     else {
@@ -200,7 +193,13 @@ function mesesDelAño(array) {
 //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
 // Tu código:
 
-function mayorACien(array) {}
+function mayorACien(array) {
+  var enteros = [];
+  for (var i = 0; i <= 200; i++) {
+    enteros.push(array[i] > 100);
+  }
+  return enteros;
+}
 
 //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
 //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
