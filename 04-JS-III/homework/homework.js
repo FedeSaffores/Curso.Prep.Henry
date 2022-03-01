@@ -113,24 +113,27 @@ function numeroMasGrande(numeros) {
 // Tu código:
 
 function multiplicarArgumentos() {
-  if (arguments.length === 0) return 0;
-  if (arguments.lenght === 1) return arguments;
-  var total = 1;
-  for (i = 0; i < arguments.lenght; i++) {
-    total = total * arguments[i];
-  }
-  return total;
+  if (arguments.length === 0) return 0; 
+  if (arguments.length === 1 ) return arguments [0]
+   var total = 1 
+    for (i = 0; i< arguments.length; i++) { total = total * arguments; 
+    return total;
+ }
 }
-
 // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
 // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
 // Escribe tu código aquí:
 
 function cuentoElementos(arreglo) {
-  var filtro = [];
-  filtro = arreglo.filter((numero) => numero > 18);
-  return filtro.length;
+var elementos = 0
+for (var i = 0; i < arreglo.length; i++) { 
+  if (arreglo[i] > 18) { elementos = elementos + 1; 
+  }
+
+  return elementos
 }
+}
+
 
 //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
 //Escribe tu código aquí
@@ -158,14 +161,13 @@ function empiezaConNueve(n) {
 //Escribe tu código aquí
 
 function todosIguales(arreglo) {
-  var elemento = [];
   for (i = 0; i < arreglo.length; i++) {
-    if (arreglo.lenght === arreglo[i]) return true;
-    else {
-      return false;
-    }
-  }
-}
+    if (arreglo[i] === arreglo)
+    return true 
+    else return false
+  }  
+}  
+  
 
 //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
 //retornar true, caso contrario retornar false.
@@ -173,20 +175,21 @@ function todosIguales(arreglo) {
 
 function mesesDelAño(array) {
   var nuevoArray = [];
-  for (i = 0; i < array.lenght; i++) {
-    if (
-      array[i] === "Enero" ||
-      array[i] === "Marzo" ||
-      array[i] === "Noviembre"
-    ) {
-      nuevoArray.push(array[i]);
-
+  for (i = 0; i < array.length; i++) {
+    if (array[i] ===  "Marzo" || array[i] === "Enero" || array[i] === "Noviembre") {
+      nuevoArray.push(array[i]) 
+      if (nuevoArray.length === 3) { 
       return nuevoArray;
-    } else {
-      ("No se encontraron los meses perdidos");
+      }
     }
+    
   }
-}
+       if (nuevoArray !== 3) { 
+      return "No se encontraron los meses pedidos";
+  }
+
+  }
+  
 
 //Dado un array que contiene algunos meses del año desordenados, recorrer el array buscando los meses de
 // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
@@ -195,11 +198,11 @@ function mesesDelAño(array) {
 
 function mayorACien(array) {
   var enteros = [];
-  for (var i = 0; i <= 200; i++) {
-    enteros.push(array[i] > 100);
-  }
-  return enteros;
+    enteros = array.filter((numero) => numero > 100);
+   return enteros.length;
 }
+  
+
 
 //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
 //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
