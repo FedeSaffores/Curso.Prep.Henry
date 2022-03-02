@@ -1,11 +1,19 @@
 // No cambies los nombres de las funciones.
 
 function crearGato(nombre, edad) {
+  this.nombre = nombre
+  this.edad = edad
+  this.maullar = "Meow"
+  var nombre = 'Fede' 
+  var edad = 31
+  crearGato.prototype.introduccion = function () { 
+    return 'Mi nombre es '+ this.nombre + 'edad '+ this.edad + this.maullar}
   // Crear un nuevo objeto con la propiedad "nombre" y el valor definido como el argumento "nombre".
   // Agrega una propiedad al objeto con el nombre "edad" y usa el valor definido en el argumento "edad"
   // Agrega un método (funcion) llamado "meow" que devuelva el string "Meow!"
   // Devuelve el objeto
   // Tu código:
+
 }
 
 

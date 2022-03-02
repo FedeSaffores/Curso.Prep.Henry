@@ -105,7 +105,14 @@ function promedioResultadosTest(resultadosTest) {
 // Tu código:
 
 function numeroMasGrande(numeros) {
-  return Math.max.apply(null, numeros);
+  // return Math.max(...numeros);
+  var masGrande = numeros[0];
+  for (let i = 0; i < numeros.length; i++) {
+    if( numeros[i] > masGrande) {
+      masGrande = numeros[i]
+    }
+  }
+  return masGrande
 }
 
 // "numeros" debe ser una matriz de enteros (int/integers)
@@ -114,24 +121,25 @@ function numeroMasGrande(numeros) {
 
 function multiplicarArgumentos() {
   if (arguments.length === 0) return 0; 
-  if (arguments.length === 1 ) return arguments [0]
-   var total = 1 
-    for (i = 0; i< arguments.length; i++) { total = total * arguments; 
-    return total;
- }
+  if (arguments.length === 1 ) return arguments[0]
+  let multiplo = 1;
+  for (let i = 0; i < arguments.length; i++) {
+    multiplo = multiplo * arguments[i]
+  }
+  return multiplo
 }
 // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
 // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
 // Escribe tu código aquí:
 
 function cuentoElementos(arreglo) {
-var elementos = 0
-for (var i = 0; i < arreglo.length; i++) { 
-  if (arreglo[i] > 18) { elementos = elementos + 1; 
+  var ele = 0;
+  for (let i = 0; i < arreglo.length; i++) { 
+    if (arreglo[i] > 18) {
+      ele = ele + 1;
+    }
   }
-
-  return elementos
-}
+  return ele
 }
 
 
@@ -162,10 +170,9 @@ function empiezaConNueve(n) {
 
 function todosIguales(arreglo) {
   for (i = 0; i < arreglo.length; i++) {
-    if (arreglo[i] === arreglo)
-    return true 
-    else return false
+    if (arreglo[i] !== arreglo[0]) return false
   }  
+  return true
 }  
   
 
@@ -198,8 +205,12 @@ function mesesDelAño(array) {
 
 function mayorACien(array) {
   var enteros = [];
-    enteros = array.filter((numero) => numero > 100);
-   return enteros.length;
+    for (let i = 0; i < array.length; i++) {
+      if( array[i] > 100) {
+        enteros.push(array[i])
+      }
+    }
+   return enteros;
 }
   
 
@@ -209,16 +220,16 @@ function mayorACien(array) {
 // Tu código:
 
 function breakStatement(numero) {
-  let n = 0;
-  let x = 0;
-  while (n < 20) {
-    n++;
-    x += n;
+  let n = numero;
+  let array = [];
+  for (let i = 0; i < 10; i++) {
+    if (n === i) {
+      return "Se interrumpió la ejecución";
+    };
+    n += 2; // n = n + 2;
+    array.push(n)
   }
-  {
-    if (numero === 20) brack;
-    return "Se interrumpió la ejecución";
-  }
+  return array
 }
 
 //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
@@ -229,7 +240,18 @@ function breakStatement(numero) {
 //Pista: usá el statement 'break'
 // Tu código:
 
-function continueStatement(numero) {}
+function continueStatement(numero) {
+  let n = numero;
+  let array = [];
+  for (let i = 0; i < 10; i++) {
+    if (i === 5) {
+      continue;
+    };
+    n += 2; // n = n + 2;
+    array.push(n)
+  }
+  return array
+}
 
 //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
 //Guardar cada nuevo valor en un array.
