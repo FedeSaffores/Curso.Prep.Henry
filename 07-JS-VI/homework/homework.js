@@ -1,6 +1,7 @@
 // Do not change any of the function names
 
 function mayuscula(nombre) {
+return nombre[0].toUpperCase() + nombre.slice(1);
   //La función recibe un nombre y debe devolver el mismo que recibe pero con su primer letra en mayúscula
   //ej: Recibe "mario" ----> Devuelve "Mario"
   //Tu código:
