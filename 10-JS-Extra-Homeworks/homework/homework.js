@@ -59,33 +59,51 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
+  var palabras = str.split(" ")
+  var nuevastring=""
+  var final2= []
+  { for (i=0;i<palabras.length;i++)
+    {
+      nuevastring= palabras[i].split("").reverse("").join("")
+      final2.push(nuevastring)
+    }
+    return final2.join(" ")
+}
+}
 
-} 
 
-
-function capicua(numero){
+function capicua(numero) {
   //Escribe una función, la cual recibe un número y determina si es o no capicúa.
   //La misma debe retornar: "Es capicua" si el número se número que se lee igual de 
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
   //ej: NEUQUEN MENEM 1221
 
-  if(numero.toString()===numero.toString().split('').reverse().join(''))
-  return "Es capicua";
-  else 
-  return "No es capicua";
-}
+  let palabra= numero.toString()
+
+  for (let i = 0; j = palabra.length -1, i <= j;i++, --j) 
+  {
+    if (palabra.charAt(i) !== palabra.charAt(j)) {
+      return "No es capicua"
+    }
+    return "Es capicua"
+  }
+  }
+
+
 
 
 function deleteAbc(cadena){
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí 
-
+    //
+    let cadena2 = "";
   for (i=0;i<cadena.length;i++) {
-  if(cadena[i] ==="a" && cadena[i] ==="b" && cadena[i]==="c")
-     delete cadena["b", "c", "a"];
-  return cadena
+  if(cadena[i] !=="a" && cadena[i] !=="b" && cadena[i]!=="c")
+    { cadena2+= cadena[i] }
+  } {
+  return cadena2
   }
 }
 
@@ -110,15 +128,14 @@ function buscoInterseccion(arreglo1, arreglo2){
   for( i = 0; i < arreglo1.length; i++)
    {
      for (j =0; j< arreglo2.length; j++)
-     {if(arreglo1[i]===arreglo2[j]){    
+     { if(arreglo1[i]===arreglo2[j]){    
     array.push(arreglo1[i])
   } 
 }
    }
   return array;
-  
-
 }
+
 
 
 
